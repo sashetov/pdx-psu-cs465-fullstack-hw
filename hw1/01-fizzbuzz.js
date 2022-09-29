@@ -1,17 +1,26 @@
 /** Exercise 01 - Fizzbuzz
 
-Write a program that writes all the numbers from 1 to 100, with some exceptions: 
-- For numbers divisible by 3, print “fizz” 
-- For numbers divisible by 5 (but not 3), print “buzz” 
+Write a program that writes all the numbers from 1 to 100, with some exceptions:
+- For numbers divisible by 3, print “fizz”
+- For numbers divisible by 5 (but not 3), print “buzz”
 - For numbers divisible by 3 and 5, print “fizzbuzz”
 
 Use console.log() to write the proper output to the command line.
 
-**/
+ */
 
 const fizzbuzz = () => {
-  console.log(1);
-  // Add your code here
+  for (let i = 1; i <= 100; i += 1) {
+    let thingToSay = i;
+    if (i % 5 === 0 && i % 3 === 0) {
+      thingToSay = 'FizzBuzz!';
+    } else if (i % 3 === 0) {
+      thingToSay = 'Fizz!';
+    } else if (i % 5 === 0) {
+      thingToSay = 'Buzz!';
+    }
+    console.log(thingToSay);
+  }
 };
 
 fizzbuzz();
