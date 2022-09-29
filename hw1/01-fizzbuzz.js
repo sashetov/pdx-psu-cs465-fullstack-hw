@@ -10,6 +10,7 @@ Use console.log() to write the proper output to the command line.
 **/
 
 const fizzbuzz = () => {
+  console.log(1);
   // Add your code here
 };
 
