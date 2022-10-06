@@ -1,7 +1,13 @@
-/** Exercise 01 - Coins **/
+/* eslint-disable no-console */
+/** Exercise 01 - Coins * */
 
 const calculateChange = (input) => {
-  // Add your code here
+  const dollars = Math.floor(input);
+  const cents = Math.round((input - dollars) * 100);
+  const quarters = Math.floor(cents / 25);
+  const dimes = Math.floor((cents - quarters * 25) / 10);
+  const pennies = Math.floor(cents - quarters * 25 - dimes * 10);
+  return `$${input} => ${dollars} dollars, ${cents} cents, ${quarters} quarters, ${dimes} dimes, ${pennies} pennies`;
 };
 
 // Sample Test Cases
