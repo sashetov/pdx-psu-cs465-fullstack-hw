@@ -27,7 +27,7 @@ function logSubmit(event) {
     msg.style.display = 'inherit';
   } else {
     err.textContent = 'Error: Please input an 8-digit number';
-    err.style.display ='inherit';
+    err.style.display = 'inherit';
   }
   event.preventDefault();
 }
