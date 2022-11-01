@@ -1,6 +1,6 @@
 const http = require('http');
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5002;
 /*
 In this exercise, you will parse the URL for query parameters and return a
 table with the information for each query parameter.
@@ -33,14 +33,14 @@ const server = http.createServer((req, res) => {
     return result;
   };
   const getKeyValParams = () => {
-    let result = '<ul>';
+    let result = '<table border="1">';
     const entries = Array.from(url.searchParams.entries());
     for (let i = 0; i < entries.length; i += 1) {
       const key = entries[i][0];
       const val = entries[i][1];
-      result += `<li>${key} : ${val}</li>`;
+      result += `<tr><td>${key}</td><td>${val}</td></tr>`;
     }
-    result += '</ul>';
+    result += '</table>';
     return result;
   };
   if (req.url === '/') {
