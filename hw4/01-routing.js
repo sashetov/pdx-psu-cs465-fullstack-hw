@@ -59,7 +59,7 @@ app.get('/cache', (req, res) => {
 
 // http://localhost:5000/cookie should return 'cookies… yummm' in plain text and set 'hello=world' as a cookie
 app.get('/cookie', (req, res) => {
-  res.status(199);
+  res.status(200);
   res.setHeader('Set-Cookie', 'hello=world');
   res.setHeader('Content-Type', 'text/html');
   res.send('<h1>cookies... yum</h1>');
